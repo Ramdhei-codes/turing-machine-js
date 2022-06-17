@@ -1,0 +1,100 @@
+Maquina de turing
+//000001010101010100
+
+Char ObtenerSimbolo(String cadena, int cabezal)
+{
+   if (cabezal<0 || cabezal>=length(cadena)) return "B";
+   return cadena[cabezal];
+}
+
+Transicion(cadena, cabezal, reemplazo, movimiento, EstadoActual, NuevoEstado){
+    cadena[cabezal] = reemplazo;
+	if (movimiento =="D") cabezal++;
+	cabezal--;
+	EstadoActual = NuevoEstado;
+}
+
+Leer(Cadena);
+EstadoActual = EstadoInicial;
+Cabezal = 0;
+
+While (not CondicionSalida){
+	
+	Switch(EstadoActual){
+	
+		Case A:
+			Simbolo = ObtenerSimbolo(Cadena, Cabezal);
+			If (Simbolo == "S") Transicion(cadena, cabezal, Simbolo, "D", EstadoActual,EstadoActual);
+			else
+			if (Simbolo == "1" || Simbolo == "0")
+				Transicion(cadena, cabezal, Simbolo, "D");
+		break;
+			
+		}	
+		Case B:
+			if (Simbolo == "0"){
+				Cabezal++;
+				EstadoActual = C;
+			}
+			if (Simbolo == "1"){
+				Cabezal++;
+				EstadoActual = D;
+			}
+
+    
+
+}
+
+
+000 01 1100  B = 1100
+
+public void main(){
+int A,B,C,T;
+B = 1100;
+}
+
+Asignar valores
+A0000B0000C0000T0000S000001010000101111111
+Asignar variables
+A0000B1101C0000T0000S0010001111
+A0000B0000C1101T0000S0010010111
+A0000B0000C0000T0011S0010011111
+A0000B0000C0000T0011S0010000111
+
+A1010B1000C0000T0011S0010100111
+
+A1100B1001C0101T0011S0010110111
+
+A1100B1001C0101T0111S0010111111
+
+A1100B1001C0101T0111S0011000111
+
+A1100B1101C0101T0111S0011001111
+
+A1100B1101C0101T0111S0011011111
+
+A1111B1101C0101T1001S0011100111
+
+A1111B1101C0101T0001S0011110111
+
+A1111B1101C0101T0001S010101111
+
+A1111B1101C0101T0001S010100111
+
+A1111B1101C0101T0001S00010101110000111
+
+A1111B1101C0101T0001S00001101110001111
+
+A1111B1101C0101T0001S00010101110010111
+
+A1111B1101C0101T0001S0111010111
+
+A1111B1101C0101T0001S0110110111
+
+A1111B1101C0101T0001S0110100111
+
+A1111B1101C0101T0001S0111000111
+
+
+A0000B0000C0000T0000S1010111101110111
+
